@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p></p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
+    </div>
+    <h2>Latest Mars News</h2>
+    <h3>{{ mars_mission.news_title }}</h3>
+    <h4>{{ mars_mission.news_p }}</h4>
+  </div>
+  <br>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <h2>Featured Image</h2>
+          </div>
+          <div class="col-md-6">
+              <h3>Mars Facts</h3>
+          </div>
+      </div>
+  </div>
+  <div class="continer">
+      <div class="row">
+          <div class="col-md-6">
+              <img src="{{featured_img_url}}" alt="Featured image">
+            </div>
+          <div>
+              <table>
+                {{mars_mission.tables}}    
+              </table>
+          </div>  
+        </div>
+   </div>
+   <br>
+   <div class="container">
+       <div class="row>">
+           <div class="col-md-12">
+               <center><h2>Mars Hemispheres</h2></center>
+           </div>
+       </div>
+   </div>
+   <br> 
+   <div class="container">
+    <div class="row>">
+        <div class="col-md-6">
+            <img src="{{hemisphere_image_url[0]['img_url']}}" alt="Cerberus Hemisphere Enhanced">
+            <h2>Cerberus Hemisphere Enhanced</h2>
+        </div>
+        <div class="col-md-6">
+            <img src="{{hemisphere_image_url[1]['img_url']}}" alt="Schiaparelli Hemisphere Enhanced">
+            <h2>Schiaparelli Hemisphere Enhanced</h2>
+        </div>
+    </div>
+   </div>
+   <br>
+   <div class="container">
+    <div class="row>">
+        <div class="col-md-6">
+            <img src="{{hemisphere_image_url[2]['img_url']}}" alt="Syrtis Major Hemisphere Enhanced">
+            <h2>Syrtis Major Hemisphere Enhanced</h2>
+        </div>
+        <div class="col-md-6">
+            <img src="{{hemisphere_image_url[3]['img_url']}}" alt="Valles Marineris Hemisphere Enhanced">
+            <h2>Valles Marineris Hemisphere Enhanced</h2>
+        </div>
+    </div>
+   </div>
+</body>
+
+</html>
