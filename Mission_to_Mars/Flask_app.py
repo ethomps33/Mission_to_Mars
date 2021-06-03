@@ -24,13 +24,13 @@ def scrape():
     # Run the scrape function and save the results to a variable
     mars_mission = mongo.db.mars_mission
     mars_data = scrape_mars.scrape()
-    mars_mission.update({}, mars_data, upsert=True)
+    
 
     # Update the Mongo database using update and upsert=True
-    # @TODO: YOUR CODE HERE!
+    mars_mission.update({}, mars_data, upsert=True)
 
     # Redirect back to home page
-    return redirect("/")
+    return redirect("/", code=302)
 
 
 if __name__ == "__main__":
